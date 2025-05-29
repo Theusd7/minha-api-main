@@ -1,0 +1,116 @@
+type: collection.insomnia.rest/5.0
+name: api tarefas
+meta:
+  id: wrk_b24e34454ce74f169350336450814ce5
+  created: 1748477335299
+  modified: 1748559078482
+collection:
+  - url: http://localhost:3000/tarefas
+    name: listar tarefas
+    meta:
+      id: req_9118aaff831b43b2b87fe5fc06496c55
+      created: 1748558375688
+      modified: 1748558969202
+      isPrivate: false
+      sortKey: -1748558375688
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.1.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/tarefas
+    name: adiciona tarefas
+    meta:
+      id: req_9928cdbb833e4239b300a899f1a8fd2b
+      created: 1748558725925
+      modified: 1748558961812
+      isPrivate: false
+      sortKey: -1748558725925
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "titulo": "Estudar Node.js"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.1.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/tarefas/1
+    name: conclui tarefas
+    meta:
+      id: req_7ee058b52bbc42828346e5a5700038fc
+      created: 1748558893238
+      modified: 1748558951837
+      isPrivate: false
+      sortKey: -1748558893238
+    method: PATCH
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "concluida": true
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.1.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/tarefas/1
+    name: deleta tarefa
+    meta:
+      id: req_bc21da0f78e740528f815f0fa1900a89
+      created: 1748558971633
+      modified: 1748559013057
+      isPrivate: false
+      sortKey: -1748558971633
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/11.1.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_9132bc3b35ef713290f6a5c378fef4610f76c2af
+    created: 1748558353804
+    modified: 1748558353804
+environments:
+  name: Base Environment
+  meta:
+    id: env_9132bc3b35ef713290f6a5c378fef4610f76c2af
+    created: 1748477335300
+    modified: 1748558353785
+    isPrivate: false
